@@ -63,14 +63,14 @@
         </div>
     </article>
 
-    <div>
+    <aside class="after-post w-100">
         <!-- Navigation -->
         <div class="navigation d-flex justify-content-between">
             {{with .NextInSection}}
-            <a class="d-block col-md-6" href="{{ .Permalink }}"> &laquo; {{.Title}}</a>
+            <a href="{{ .Permalink }}"> &laquo; {{.Title}}</a>
             {{end}}
             {{with .PrevInSection}}
-            <a class="d-block col-md-6 text-lg-right" href="{{ .Permalink }}">{{.Title}} &raquo;</a>
+            <a href="{{ .Permalink }}">{{.Title}} &raquo;</a>
             {{end}}
         </div>            
 
@@ -88,7 +88,7 @@
                 {{- partial "single-partials/comments.html" . -}}
             {{ end }}
         {{ end }}
-    </div>
+    </aside>
     <!-- End Post
         ================================================== -->
     {{- partial "_shared/alertbar.html" . -}}
