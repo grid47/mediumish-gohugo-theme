@@ -10,14 +10,30 @@
             <a href='/authors/index.html#{{ .Data.Term }}' class="primary-text-color text-decoration-none">{{ .Params.name }}</a>
         </div>
         <div class="card-subtitle">{{ .Params.title }}
-            {{ with .Params.Linkedin }}
-            <a class="social-icon" target='_blank' href='https://linkedin.com/in/{{ . }}'><i class="fab fa-linkedin"></i></a>
+            {{ with .Params.GitHub }}
+            <a class="social-icon" target='_blank' href='https://github.com/{{ . }}'>
+                <i class="fab fa-github"></i>
+            </a>
             {{ end }}
-            {{ with .Params.Twitter }}
-            <a class="social-icon" target='_blank' href='https://twitter.com/{{ . }}'><i class="fab fa-twitter"></i></a>
+            {{ with .Params.LinkedIn }}
+            <a class="social-icon" target="_blank" href="https://linkedin.com/in/{{ . }}">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            {{ end }}            
+            {{ with .Params.Udemy }}
+            <a class="social-icon" target="_blank" href="https://udemy.com/user/{{ . }}">
+                <i class="fab fa-github"></i>
+            </a>
             {{ end }}
-            {{ with .Params.Email }}
-            <a class="social-icon" target='_blank' href='mailto:{{ . }}'><i class="fa fa-envelope"></i></a>
+            {{ with .Params.YouTube }}
+            <a class="social-icon" target="_blank" href="https://youtube.com/@{{ . }}">
+                <i class="fab fa-play"></i>
+            </a>
+            {{ end }}
+            {{ with .Params.LeetCode }}
+            <a class="social-icon" target="_blank" href="https://leetcode.com/{{ . }}">
+                <i class="fab fa-code"></i>
+            </a>
             {{ end }}
         </div>
         <div class="card-text">{{ .Content}}</div>
