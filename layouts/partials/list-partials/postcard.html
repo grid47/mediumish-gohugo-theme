@@ -15,14 +15,14 @@
             {{ if .GetTerms "authors" }}
                 {{ range first 1 (.GetTerms "authors") }}
             <a href='/authors/index.html#{{ .Data.Term }}'>
-                <img src='{{ default "/images/author.png" .Params.thumbnail }}' alt='{{ default .Data.Term .Params.name }}'/>
+                <img src='{{ default "/images/logo.png" .Params.thumbnail }}' alt='{{ default .Data.Term .Params.name }}'/>
             </a>
             <div class="author">
                 <a class="primary-text-color" href='/authors/index.html#{{ .Data.Term }}'>{{ default .Data.Term .Params.name }}</a>
             </div>
                 {{ end }}
             {{ else }}
-            <img src='/images/author.png' alt='Author'/>
+            <img src='/images/logo.png' alt='Author'/>
             <div class="author">Author</div>
             {{ end }}
         </div>
